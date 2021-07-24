@@ -21,3 +21,5 @@ This api is a facade for grabbing info about music artists from https://iws-braz
 * Use a better caching implementation (redis for example) instead of an in memory solution
 
 * Allow pagination
+
+* Unit Tests
