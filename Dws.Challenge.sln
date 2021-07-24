@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dws.Challenge.Application",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dws.Challenge.WebApi", "src\Dws.Challenge.WebApi\Dws.Challenge.WebApi.csproj", "{A1A45053-816E-4338-912E-860023E2BE9F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C41F6FA2-05AF-40BF-80CD-7475FDA03FA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dws.Challenge.UnitTests", "tests\Dws.Challenge.UnitTests\Dws.Challenge.UnitTests.csproj", "{72A652E2-B5C1-4100-96C3-59C4CB900AE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{A1A45053-816E-4338-912E-860023E2BE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1A45053-816E-4338-912E-860023E2BE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1A45053-816E-4338-912E-860023E2BE9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A652E2-B5C1-4100-96C3-59C4CB900AE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A652E2-B5C1-4100-96C3-59C4CB900AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A652E2-B5C1-4100-96C3-59C4CB900AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A652E2-B5C1-4100-96C3-59C4CB900AE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +52,7 @@ Global
 		{E5F14B70-8020-4C92-9DC0-F461AE8FAF8F} = {9FADB5FC-E44B-48FA-BBB3-E9D2B9831554}
 		{5C4E8F45-7CFD-486F-919E-F0445172AAE3} = {9FADB5FC-E44B-48FA-BBB3-E9D2B9831554}
 		{A1A45053-816E-4338-912E-860023E2BE9F} = {9FADB5FC-E44B-48FA-BBB3-E9D2B9831554}
+		{72A652E2-B5C1-4100-96C3-59C4CB900AE5} = {C41F6FA2-05AF-40BF-80CD-7475FDA03FA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C7872D9-ABE6-4498-B2EB-8314485EAEFC}

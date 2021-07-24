@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Dws.Challenge.Application.Services.Interfaces;
+using Dws.Challenge.Infrastructure.Logging.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Dws.Challenge.WebApi.Controllers
 {
@@ -10,10 +10,10 @@ namespace Dws.Challenge.WebApi.Controllers
     [Route("[controller]")]
     public class ArtistController : ControllerBase
     {
-        private readonly ILogger<ArtistController> logger;
+        private readonly ILoggerWrapper<ArtistController> logger;
         private readonly IArtistService artistService;
 
-        public ArtistController(ILogger<ArtistController> logger, IArtistService artistService)
+        public ArtistController(ILoggerWrapper<ArtistController> logger, IArtistService artistService)
         {
             this.logger = logger;
             this.artistService = artistService;
@@ -26,7 +26,7 @@ namespace Dws.Challenge.WebApi.Controllers
             {
                 var artist = await this.artistService.GetArtistsSummaryAsync(artistName);
                 return this.Ok(artist);
-            }, $"Failed to retrieve the list of artists");
+            }, "Failed to retrieve the list of artists");
         }
 
         [Route("{artistId}")]

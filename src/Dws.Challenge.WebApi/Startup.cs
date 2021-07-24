@@ -6,6 +6,8 @@ using Dws.Challenge.Infrastructure.Caching;
 using Dws.Challenge.Infrastructure.Caching.Interfaces;
 using Dws.Challenge.Infrastructure.Gateways;
 using Dws.Challenge.Infrastructure.Gateways.Interfaces;
+using Dws.Challenge.Infrastructure.Logging;
+using Dws.Challenge.Infrastructure.Logging.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -37,6 +39,7 @@ namespace Dws.Challenge.WebApi
             services.AddTransient<IArtistService, ArtistService>();
             services.AddTransient<IArtistGateway, ArtistGateway>();
             services.AddSingleton<ICache, InMemoryCache>();
+            services.AddTransient(typeof(ILoggerWrapper<>), typeof(LoggerWrapper<>));
 
             services.AddHttpClient("artist-http-client", httpClient =>
             {
