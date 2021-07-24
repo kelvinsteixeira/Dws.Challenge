@@ -22,4 +22,4 @@ This api is a facade for grabbing info about music artists from https://iws-braz
 
 * Allow pagination
 
-* Unit Tests
+* Improve tests cases
