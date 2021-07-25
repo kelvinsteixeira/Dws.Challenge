@@ -28,7 +28,7 @@ Get artist details for id "5fce349568b91d001293bdc2" : ```https://dws-challenge.
 
 ### Next Steps
 
-* Separate caching logic from ArtistService and Fetching. Pretty much a GetOrFetchService responsible by looking to the cache and fetching the data in case nothing is found from cache
+* Separate caching and fetching logic from ArtistService. Pretty much a GetOrFetchService responsible by looking into the cache and fetching the data in case nothing is found
 
 * Use a Semaphore to avoid multi-thread issues when fetching and caching data
 
