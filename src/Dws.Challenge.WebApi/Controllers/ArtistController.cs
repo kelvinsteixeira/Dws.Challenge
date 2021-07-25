@@ -36,6 +36,11 @@ namespace Dws.Challenge.WebApi.Controllers
             return this.ExecAndHandleAsync(async () =>
             {
                 var artist = await this.artistService.GetArtistDetailAsync(artistId);
+                if (artist == null)
+                {
+                    return this.NotFound(artistId);
+                }
+
                 return this.Ok(artist);
             }, $"Failed to retrieve artist details. Id: {artistId}");
         }
