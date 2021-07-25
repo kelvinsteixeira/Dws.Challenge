@@ -36,6 +36,6 @@ Get artist details for id "5fce349568b91d001293bdc2" : ```https://dws-challenge.
 
 * Allow pagination
 
-* Improve tests cases
+* Improve test cases
 
 * Error Handling and formatted results
